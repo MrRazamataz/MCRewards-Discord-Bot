@@ -27,7 +27,7 @@ class manager(commands.Cog):
                 #print("Meddling detected in `manager.py` (version number invalid), ignoring :P")
                 pass
             elif vernum > version:
-                print(f"You are running an outdated version! Running: `{version}`, Latest: `{vernum}`.")
+                print(f"You are running an outdated version! Running: `{version}`, Latest: `{vernum}`. \nFind the latest files here: https://github.com/MrRazamataz/MCRewards-Discord-Bot .")
 
 
             else:
