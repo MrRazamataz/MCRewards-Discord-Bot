@@ -42,8 +42,13 @@ class reward(commands.Cog):
             global recent_change, prefix
             recent_change = True
             if levels[id].is_integer():
-                await message.channel.send(f"{message.author.mention}, well done! You're now level: `{levels[id]}`.")
+                await message.channel.send(f"{message.author.mention}, well done! You're now level: `{levels[id].round()}`.")
+                level = levels[id].round()
+                rank = "rank"
+                lp_group = f"{level}-{rank}"
                 if str(message.author.id) in accountdata:
+                    #with MCRcon(f"{rconip}", f"{rconpassword}", port=rconport) as mcr:
+                        #resp = mcr.command(f"lp user {accountdata[id]} parent add {rank}")
                     return
                 else:
                     await message.channel.send(f"Please link your Minecraft account to your Discord with `{prefix}link <username>`!")
