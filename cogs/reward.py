@@ -56,7 +56,7 @@ class reward(commands.Cog):
                     #resp = mcr.command(f"lp user {accountdata[id]} parent add {rank}")
 
 
-    @tasks.loop(minutes=1)
+    @tasks.loop(minutes=3)
     async def save(self):
         global recent_change
         if recent_change is True:
