@@ -15,7 +15,8 @@ Idea comes from this thread on r/admincraft https://www.reddit.com/r/admincraft/
 
 The code is simple, it's not meant to be advanced. Yes, there may be better ways to code this, like not using .json to store data or not using so many global variables, but it's simple and it works well.
 
-The bot saves the `levels.json` file to disk from RAM every 3 mins.
+The bot saves the `levels.json` file to disk from RAM every 3 mins.  
+Everytime a change is made to `accountdata.json` via a bot command, the changes are saved instantly.  
 
 ## Planned:
 [ ] A method to protect against spam leveling up.  
