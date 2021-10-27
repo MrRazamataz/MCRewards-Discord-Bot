@@ -16,5 +16,9 @@ The code is simple, it's not meant to be advanced. Yes, there may be better ways
 
 ## Planned:
 [ ] A method to protect against spam leveling up.
+[ ] An easy way for admins to add reward commands.
 
 Let me know of suggestions by creating an issue in the Github issues TAB.
+
+## Compatibility: 
+It is compatibile with every server software that offers support for rcon. Just fill out the info in `config.json`. It runs commands with the players username that is stored in `accountdata.json`. The commands currently can only be edited in the code (it's quite simple) in `reward.py`.
