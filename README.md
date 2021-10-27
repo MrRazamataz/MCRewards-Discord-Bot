@@ -15,7 +15,7 @@ Idea comes from this thread on r/admincraft https://www.reddit.com/r/admincraft/
 The code is simple, it's not meant to be advanced. Yes, there may be better ways to code this, like not using .json to store data or not using so many global variables, but it's simple and it works well.
 
 ## Planned:
-[ ] A method to protect against spam leveling up.
+[ ] A method to protect against spam leveling up.  
 [ ] An easy way for admins to add reward commands.
 
 Let me know of suggestions by creating an issue in the Github issues TAB.
