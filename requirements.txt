@@ -1,0 +1,3 @@
+discord
+mcrcon
+urllib3
