@@ -3,7 +3,7 @@ A Discord bot that rewards players in Minecraft for sending messages on Discord
 
 
 ## How to setup:
-* Download this git as a .zip, or clone it.
+* [Download this git as a .zip](https://github.com/MrRazamataz/MCRewards-Discord-Bot/archive/refs/heads/main.zip), or clone it.
 * Install the pip packages in `requirements.txt` with `pip install -r requirements.txt` or `pip3` depening on how your system is setup.
 * Go to `config.json` and fill out the needed info.
 * Don't change `levels.json` or `accountdata.json` from the default ones on GitHub on first use, the bot will manage those files for you. After you have some data in them, you can change the vaules or whatever, just restart the bot once you do.
