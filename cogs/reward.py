@@ -9,11 +9,13 @@ class reward(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        global levels
+        global levels, rewards
         print("Loading levels...")
         with open("levels.json") as f:
             levels = json.load(f)
         print("Levels loaded.")
+        with open("rewards.json") as f:
+            rewards = json.load(f)
         print("Starting save tasks loop...")
         self.save.start()
         with open("config.json") as f:
@@ -47,13 +49,50 @@ class reward(commands.Cog):
                 lp_group = f"{level}-{rank}"
                 await message.channel.send(f"{message.author.mention}, well done! You're now level: `{level}`.")
                 if str(message.author.id) in accountdata:
-                    #with MCRcon(f"{rconip}", f"{rconpassword}", port=rconport) as mcr:
-                        #resp = mcr.command(f"lp user {accountdata[id]} parent add {rank}")
-                    return
+                    if str(level) in rewards:
+                        command = rewards[f"{str(level)}"]["command"]
+                        try:
+                            command = command.replace("%player%", f"{accountdata[id]}")
+                        except:
+                            pass
+                        #await message.channel.send(f"The command: \n`{command}`")
+                        with MCRcon(f"{rconip}", f"{rconpassword}", port=rconport) as mcr:
+                            resp = mcr.command(f"{command}")
                 else:
                     await message.channel.send(f"Please link your Minecraft account to your Discord with `{prefix}link <username>`!")
                 #with MCRcon(f"{rconip}", f"{rconpassword}", port=rconport) as mcr:
                     #resp = mcr.command(f"lp user {accountdata[id]} parent add {rank}")
+
+    @commands.command(name="addreward")
+    @commands.has_permissions(administrator=True)
+    async def addreward(self, ctx, level: int, *, command):
+        try:
+            global rewards
+            if level is None:
+                await ctx.send("Please provide a level as a whole number.")
+                return
+
+            #if level.is_interger():
+                #pass
+            #else:
+                #await ctx.send("The level you provide needs to be a whole number.")
+                #return
+            if command is None:
+                await ctx.send("Please provide the command that should be ran on the server. You can use `%player%` as a "
+                               "placeholder for a players username.")
+                return
+
+            with open('rewards.json', 'r+') as f:
+                data = json.load(f)
+                f.seek(0)
+                f.truncate(0)
+                data[f'{level}'] = {"command": f"{command}"}
+                json.dump(data, f, indent=4)
+            await ctx.send(f"Added reward at level `{level}` with the command `{command}`.")
+            with open("rewards.json") as f:
+                rewards = json.load(f)
+        except Exception as e:
+            await ctx.send(f"`{e}`")
 
 
     @tasks.loop(minutes=3)

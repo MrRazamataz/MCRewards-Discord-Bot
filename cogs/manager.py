@@ -3,7 +3,7 @@ import json
 import discord
 import urllib3
 from decimal import *
-version = Decimal("0.02") # dont change, thanks.
+version = Decimal("0.03") # dont change, thanks.
 class manager(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -28,7 +28,7 @@ class manager(commands.Cog):
                 pass
             elif vernum > version:
                 print(f"You are running an outdated version! Running: `{version}`, Latest: `{vernum}`. \nFind the latest files here: https://github.com/MrRazamataz/MCRewards-Discord-Bot .")
-
+                await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"new version on GitHub `{vernum}`."))
 
             else:
                 pass
