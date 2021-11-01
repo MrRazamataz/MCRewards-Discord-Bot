@@ -1,5 +1,6 @@
 # MCRewards-Discord-Bot
-A Discord bot that rewards players in Minecraft for sending messages on Discord
+A Discord bot that rewards players in Minecraft for sending messages on Discord.  
+Please note, this is currently not something that I host, you need to host it yourself. If enough people request a hosted version, I could look into it.  
 
 
 ## How to setup:
