@@ -20,8 +20,8 @@ The bot saves the `levels.json` file to disk from RAM every 3 mins.
 Everytime a change is made to `accountdata.json` via a bot command, the changes are saved instantly.  
 
 ## Planned:
-[ ] A method to protect against spam leveling up.  
-[x] An easy way for admins to add reward commands (complete).
+- [ ] A method to protect against spam leveling up.  
+- [x] An easy way for admins to add reward commands (complete).
 
 Let me know of suggestions by creating an issue in the Github issues TAB.
 
