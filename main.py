@@ -12,9 +12,7 @@ token = config["token"]
 terminalprefix = config["terminalprefix"]
 prefix = config["prefix"]
 f.close()
-intents = discord.Intents.default()
-intents.members = True
-client = commands.Bot(command_prefix=prefix, help_command=None, intents=intents, case_insensitive=True)
+client = commands.Bot(command_prefix=prefix, help_command=None, case_insensitive=True)
 cogs = ['cogs.reward', 'cogs.manager', 'cogs.link']
 for cog in cogs:
     client.load_extension(cog)
