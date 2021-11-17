@@ -26,4 +26,4 @@ Everytime a change is made to `accountdata.json` via a bot command, the changes 
 Let me know of suggestions by creating an issue in the Github issues TAB.
 
 ## Compatibility: 
-It is compatibile with every server software that offers support for rcon. Just fill out the info in `config.json`. It runs commands with the players username that is stored in `accountdata.json`. The commands currently can only be edited in the code (it's quite simple) in `reward.py`.
+It is compatibile with every server software that offers support for rcon. Just fill out the info in `config.json`. It runs commands with the players username that is stored in `accountdata.json`.
