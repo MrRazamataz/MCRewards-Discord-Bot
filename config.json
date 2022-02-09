@@ -1,8 +1,10 @@
 {
-  "token": "place token here",
-  "rconip": "000.000.000.000",
-  "rconport": 1000,
-  "rconpassword": "passwordx",
+  "token": "discord bot token",
+  "managerole": "admin role",
+  "rconip": "69.69.69.69",
+  "rconport": 42069,
+  "rconpassword": "your rcon password",
   "terminalprefix": "[MCRewards]",
-  "prefix": "mcr!"
+  "prefix": "mcr!",
+  "use_mee6_levels": "false"
 }
