@@ -3,7 +3,7 @@ import json
 import discord
 import urllib3
 from decimal import *
-version = Decimal("0.03") # dont change, thanks.
+version = Decimal("0.04") # dont change, thanks.
 class manager(commands.Cog):
     def __init__(self, client):
         self.client = client
