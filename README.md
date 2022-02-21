@@ -12,7 +12,9 @@ Please note, this is currently not something that I host, you need to host it yo
 * Your users must link their Discord account to their Minecraft account with the `mcr!link <username>` command. Eg: `mcr!link MrRazamataz`. They will be reminded to link if they haven't every time they level up, otherwise the rewards won't work. They can change their username thats saved by re-running the command.
 * To add rewards (commands ran on the server), you can run the command `mcr!addreward`. Example, `mcr!addreward 2 lp user %player% parent add level2` would add the luckperms group `level2` when they reach level `2` on the bot. `%player%` is replaced with the users Minecraft username if set with `mcr!link`. Example image: https://mrrazamataz.ga/archive/python/mcrewards/example1.png .
 ## Other things and Info:
-Idea comes from this thread on r/admincraft https://www.reddit.com/r/admincraft/comments/qh3175/plugin_for_ingame_rewards_for_being_active_in/
+Idea comes from this thread on r/admincraft https://www.reddit.com/r/admincraft/comments/qh3175/plugin_for_ingame_rewards_for_being_active_in/  
+
+You can use MEE6 levels instead of the bot levels. To do this, set `use_mee6_levels` to true in `config.json`.
 
 The code is simple, it's not meant to be advanced. Yes, there may be better ways to code this, like not using .json to store data or not using so many global variables, but it's simple and it works well.
 
@@ -20,7 +22,7 @@ The bot saves the `levels.json` file to disk from RAM every 3 mins.
 Everytime a change is made to `accountdata.json` via a bot command, the changes are saved instantly.  
 
 ## Planned:
-- [ ] A method to protect against spam leveling up.  
+- [ ] A method to protect against spam leveling up.  (sort of; enable `use_mee6_levels` in `config.json` to use Mee6 levels instead).
 - [x] An easy way for admins to add reward commands (complete).
 
 Let me know of suggestions by creating an issue in the Github issues TAB.
